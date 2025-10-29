@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Potencia tu marca en Instagram</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Helvetica Neue', sans-serif;
+      background-color: #4B0082; /* púrpura intenso */
+      color: #333;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: white;
+      padding: 1rem 2rem;
+    }
+
+    .header-left {
+      color: #4B0082;
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+
+    .header-right {
+      color: white;
+      font-weight: bold;
+      font-size: 1.2rem;
+      background-color: #4B0082;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+    }
+
+    .main {
+      padding: 2rem;
+      background-color: #4B0082;
+      min-height: 100vh;
+    }
+
+    .section-title {
+      color: white;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+
+    .form-container {
+      background-color: white;
+      border-radius: 10px;
+      padding: 2rem;
+      max-width: 700px;
+      margin: auto;
+    }
+
+    .phase {
+      margin-bottom: 2rem;
+    }
+
+    .phase h2 {
+      color: #4B0082;
+      font-size: 1.4rem;
+      margin-bottom: 1rem;
+    }
+
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: bold;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 0.75rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .button {
+      background-color: white;
+      color: #4B0082;
+      border: 2px solid #4B0082;
+      padding: 0.75rem 1.5rem;
+      font-weight: bold;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    .button:hover {
+      background-color: #4B0082;
+      color: white;
+    }
+
+    .note {
+      margin-top: 1rem;
+      font-size: 0.9rem;
+      color: #555;
+      text-align: center;
+    }
+
+    .locked {
+      background-color: #eee;
+      padding: 1rem;
+      border-radius: 5px;
+      text-align: center;
+      color: #999;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="header-left">SAUDITORIA: V2</div>
+    <div class="header-right">SOCREDI</div>
+  </div>
+
+  <div class="main">
+    <h1 class="section-title">Potencia tu marca en Instagram</h1>
+
+    <div class="form-container">
+      <!-- Fase 1: Usuario -->
+      <div class="phase">
+        <h2>1. Activación de usuario</h2>
+        <form action="/auth/instagram" method="POST">
+          <button type="submit" class="button">Activar Instagram</button>
+          <div class="note">Serás redirigido para autorizar acceso y luego volverás aquí automáticamente 🌝</div>
+        </form>
+      </div>
+
+      <!-- Fase 2: Análisis -->
+      <div class="phase">
+        <h2>2. Análisis del perfil</h2>
+        <div class="locked">Esta fase se activa tras el pago y validación del formulario. Ya está lista en SAUDITORIA V1.</div>
+      </div>
+
+      <!-- Fase 3: Elección de estilo -->
+      <div class="phase">
+        <h2>3. Elección de colores y estilo</h2>
+        <form>
+          <div class="form-group">
+            <label for="color1">Color principal</label>
+            <input type="text" id="color1" name="color1" placeholder="Ej. Azul eléctrico" />
+          </div>
+
+          <div class="form-group">
+            <label for="color2">Color secundario</label>
+            <input type="text" id="color2" name="color2" placeholder="Ej. Blanco hielo" />
+          </div>
+
+          <div class="form-group">
+            <label for="style">Estilo visual</label>
+            <select id="style" name="style">
+              <option value="minimalista">Minimalista</option>
+              <option value="editorial">Editorial</option>
+              <option value="vintage">Vintage</option>
+              <option value="futurista">Futurista</option>
+            </select>
+          </div>
+        </form>
+      </div>
+
+      <!-- Fase 4: Corrección -->
+      <div class="phase">
+        <h2>4. Corrección completa</h2>
+        <div class="locked">Esta fase se desbloquea tras el análisis. Incluye biografía optimizada, captions, orden de publicaciones y sugerencias IA.</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
