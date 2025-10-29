@@ -36,11 +36,16 @@
     }
 
     .section {
+      display: none;
       background-color: white;
       border-radius: 10px;
       padding: 2rem;
       max-width: 800px;
       margin: 2rem auto;
+    }
+
+    .section.active {
+      display: block;
     }
 
     h2 {
@@ -93,15 +98,6 @@
       padding: 0.75rem;
       border-radius: 5px;
     }
-
-    .locked {
-      background-color: #eee;
-      padding: 1rem;
-      border-radius: 5px;
-      text-align: center;
-      color: #999;
-      font-style: italic;
-    }
   </style>
 </head>
 <body>
@@ -110,25 +106,26 @@
     <div class="header-right">SOCREDI</div>
   </div>
 
-  <!-- SECCIÓN: Usuario e Instagram -->
-  <div class="section" id="seccion-instagram">
-    <h2>Usuario + Activación de Instagram</h2>
-    <form action="/auth/instagram" method="POST">
+  <!-- Sección 1: Instagram -->
+  <div class="section active" id="section1">
+    <h2>1. Activación de Instagram</h2>
+    <form onsubmit="nextSection(2); return false;">
       <button type="submit" class="button">Activar Instagram</button>
       <div class="note">Se usará tu cuenta para analizar tu perfil público y estética 🌝</div>
     </form>
   </div>
 
-  <!-- SECCIÓN: Análisis del perfil -->
-  <div class="section" id="seccion-analisis">
-    <h2>Análisis del perfil</h2>
-    <div class="locked">Esta sección se activa automáticamente tras conectar tu Instagram.</div>
+  <!-- Sección 2: Análisis -->
+  <div class="section" id="section2">
+    <h2>2. Análisis del perfil</h2>
+    <p>Tu perfil está siendo analizado por IA. Resultados listos para continuar.</p>
+    <button class="button" onclick="nextSection(3)">Continuar</button>
   </div>
 
-  <!-- SECCIÓN: Estilo y colores -->
-  <div class="section" id="seccion-estilo">
-    <h2>Estilo + Colores</h2>
-    <form>
+  <!-- Sección 3: Estilo y colores -->
+  <div class="section" id="section3">
+    <h2>3. Elección de estilo y colores</h2>
+    <form onsubmit="nextSection(4); return false;">
       <div class="form-group">
         <label for="color1">Color principal</label>
         <input type="text" id="color1" name="color1" placeholder="Ej. Azul eléctrico" />
@@ -149,25 +146,20 @@
         </select>
       </div>
 
-      <button type="button" class="button">Guardar estilo</button>
+      <button type="submit" class="button">Guardar estilo</button>
     </form>
   </div>
 
-  <!-- SECCIÓN: Formulario -->
-  <div class="section" id="seccion-formulario">
-    <h2>Formulario de validación</h2>
-    <div class="locked">Aquí se cargará el formulario ritualizado. Solo algunos perfiles serán aceptados.</div>
+  <!-- Sección 4: Formulario + pago -->
+  <div class="section" id="section4">
+    <h2>4. Formulario + pago</h2>
+    <p>Completa el formulario para ser validado. Solo perfiles aceptados podrán pagar y recibir corrección.</p>
+    <button class="button" onclick="nextSection(5)">Simular validación + pago</button>
   </div>
 
-  <!-- SECCIÓN: Pago -->
-  <div class="section" id="seccion-pago">
-    <h2>Pago</h2>
-    <div class="locked">Esta sección se activa solo si tu formulario es aprobado. Aquí completas el pago para desbloquear tu corrección.</div>
-  </div>
-
-  <!-- SECCIÓN: Corrección final -->
-  <div class="section" id="seccion-correccion">
-    <h2>Corrección final del perfil</h2>
+  <!-- Sección 5: Corrección final -->
+  <div class="section" id="section5">
+    <h2>5. Corrección final del perfil</h2>
     <p><strong>Biografía actual:</strong><br>“Amante del café ☕ | Soñando en grande | 📍Venezuela”</p>
     <p><strong>Biografía optimizada:</strong><br>“Creador de impacto visual desde Venezuela 🌎 | Estilo editorial + cápsulas emocionales | Corrección en progreso ☕”</p>
 
@@ -186,7 +178,14 @@
     <h3>Sugerencias visuales:</h3>
     <p>Estilo: Editorial<br>Colores: Azul eléctrico + blanco hielo<br>Tipografía serif, fondos neutros, contraste fuerte.</p>
 
-    <div class="note">Esta corrección fue generada por IA tras validación y pago. Cada frase es una cápsula de autoridad ritualizada </div>
+    <div class="note">Esta corrección fue generada por IA tras validación y pago. Cada frase es una cápsula de autoridad ritualizada 👺</div>
   </div>
+
+  <script>
+    function nextSection(n) {
+      document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+      document.getElementById('section' + n).classList.add('active');
+    }
+  </script>
 </body>
 </html>
