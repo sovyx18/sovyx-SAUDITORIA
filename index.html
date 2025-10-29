@@ -35,11 +35,6 @@
       border-radius: 5px;
     }
 
-    .main {
-      padding: 2rem;
-      background-color: #4B0082;
-    }
-
     .section {
       background-color: white;
       border-radius: 10px;
@@ -48,7 +43,7 @@
       margin: 2rem auto;
     }
 
-    .section h2 {
+    h2 {
       color: #4B0082;
       margin-bottom: 1rem;
     }
@@ -92,20 +87,6 @@
       margin-top: 1rem;
     }
 
-    .locked {
-      background-color: #eee;
-      padding: 1rem;
-      border-radius: 5px;
-      text-align: center;
-      color: #999;
-      font-style: italic;
-    }
-
-    .caption-list {
-      list-style: none;
-      padding-left: 0;
-    }
-
     .caption-list li {
       background-color: #f0f0f0;
       margin-bottom: 0.5rem;
@@ -113,11 +94,13 @@
       border-radius: 5px;
     }
 
-    .correction-block p {
-      background-color: #f9f9f9;
+    .locked {
+      background-color: #eee;
       padding: 1rem;
       border-radius: 5px;
-      font-size: 0.95rem;
+      text-align: center;
+      color: #999;
+      font-style: italic;
     }
   </style>
 </head>
@@ -127,93 +110,83 @@
     <div class="header-right">SOCREDI</div>
   </div>
 
-  <div class="main">
-    <!-- Sección 1: Instagram -->
-    <div class="section">
-      <h2>1. Activación de Instagram</h2>
-      <form action="/auth/instagram" method="POST">
-        <button type="submit" class="button">Activar Instagram</button>
-        <div class="note">Serás redirigido para autorizar acceso y luego volverás aquí automáticamente 🌝</div>
-      </form>
-    </div>
+  <!-- SECCIÓN: Usuario e Instagram -->
+  <div class="section" id="seccion-instagram">
+    <h2>Usuario + Activación de Instagram</h2>
+    <form action="/auth/instagram" method="POST">
+      <button type="submit" class="button">Activar Instagram</button>
+      <div class="note">Se usará tu cuenta para analizar tu perfil público y estética 🌝</div>
+    </form>
+  </div>
 
-    <!-- Sección 2: Análisis + estilo -->
-    <div class="section">
-      <h2>2. Análisis + elección de estilo</h2>
-      <form>
-        <div class="form-group">
-          <label for="color1">Color principal</label>
-          <input type="text" id="color1" name="color1" placeholder="Ej. Azul eléctrico" />
-        </div>
+  <!-- SECCIÓN: Análisis del perfil -->
+  <div class="section" id="seccion-analisis">
+    <h2>Análisis del perfil</h2>
+    <div class="locked">Esta sección se activa automáticamente tras conectar tu Instagram.</div>
+  </div>
 
-        <div class="form-group">
-          <label for="color2">Color secundario</label>
-          <input type="text" id="color2" name="color2" placeholder="Ej. Blanco hielo" />
-        </div>
-
-        <div class="form-group">
-          <label for="style">Estilo visual</label>
-          <select id="style" name="style">
-            <option value="minimalista">Minimalista</option>
-            <option value="editorial">Editorial</option>
-            <option value="vintage">Vintage</option>
-            <option value="futurista">Futurista</option>
-          </select>
-        </div>
-
-        <button type="button" class="button">Completar</button>
-        <div class="note">Al completar esta fase, se abrirá el formulario y sistema de pago ritualizado 👺</div>
-      </form>
-    </div>
-
-    <!-- Sección 3: Formulario + pago -->
-    <div class="section">
-      <h2>3. Formulario + pago</h2>
-      <div class="locked">Esta sección será añadida por Sophie. Aquí se activa el análisis real y se desbloquea la corrección final.</div>
-    </div>
-
-    <!-- Sección 4: Corrección final -->
-    <div class="section">
-      <h2>4. Corrección final del perfil</h2>
-      <div class="correction-block">
-        <h3>Biografía actual:</h3>
-        <p>@usuario: “Amante del café ☕ | Soñando en grande | 📍Venezuela”</p>
+  <!-- SECCIÓN: Estilo y colores -->
+  <div class="section" id="seccion-estilo">
+    <h2>Estilo + Colores</h2>
+    <form>
+      <div class="form-group">
+        <label for="color1">Color principal</label>
+        <input type="text" id="color1" name="color1" placeholder="Ej. Azul eléctrico" />
       </div>
 
-      <div class="correction-block">
-        <h3>Biografía optimizada por IA:</h3>
-        <p>“Creador de impacto visual desde Venezuela 🌎 | Estilo editorial + cápsulas emocionales | Corrección en progreso ☕”</p>
+      <div class="form-group">
+        <label for="color2">Color secundario</label>
+        <input type="text" id="color2" name="color2" placeholder="Ej. Blanco hielo" />
       </div>
 
-      <div class="correction-block">
-        <h3>5 captions sugeridos:</h3>
-        <ul class="caption-list">
-          <li>“No es estética, es dirección. Cada post es una cápsula 🧬”</li>
-          <li>“Corrección ≠ juicio. Es legado en construcción 👁️”</li>
-          <li>“¿Y si el algoritmo solo responde a autoridad?”</li>
-          <li>“Este color no es tendencia. Es ritual.”</li>
-          <li>“Cada reacción es una escena del documental SILENCIO 🎥”</li>
-        </ul>
+      <div class="form-group">
+        <label for="style">Estilo visual</label>
+        <select id="style" name="style">
+          <option value="minimalista">Minimalista</option>
+          <option value="editorial">Editorial</option>
+          <option value="vintage">Vintage</option>
+          <option value="futurista">Futurista</option>
+        </select>
       </div>
 
-      <div class="correction-block">
-        <h3>Orden sugerido de publicaciones:</h3>
-        <p>1. Post emocional con caption largo  
-           2. Post visual con color dominante elegido  
-           3. Post testimonial (voz del cliente)  
-           4. Post de corrección pública  
-           5. Post de cierre con frase simbólica</p>
-      </div>
+      <button type="button" class="button">Guardar estilo</button>
+    </form>
+  </div>
 
-      <div class="correction-block">
-        <h3>Sugerencias visuales según estilo elegido:</h3>
-        <p>Estilo: Editorial  
-           Colores: Azul eléctrico + blanco hielo  
-           Recomendación: Usa fondos neutros, tipografía serif, y contraste fuerte en cada post. Evita saturación. Prioriza ritmo visual y narrativa emocional.</p>
-      </div>
+  <!-- SECCIÓN: Formulario -->
+  <div class="section" id="seccion-formulario">
+    <h2>Formulario de validación</h2>
+    <div class="locked">Aquí se cargará el formulario ritualizado. Solo algunos perfiles serán aceptados.</div>
+  </div>
 
-      <div class="note">Esta corrección fue generada por IA tras validación y pago. Cada frase es una cápsula de autoridad ritualizada 👺</div>
-    </div>
+  <!-- SECCIÓN: Pago -->
+  <div class="section" id="seccion-pago">
+    <h2>Pago</h2>
+    <div class="locked">Esta sección se activa solo si tu formulario es aprobado. Aquí completas el pago para desbloquear tu corrección.</div>
+  </div>
+
+  <!-- SECCIÓN: Corrección final -->
+  <div class="section" id="seccion-correccion">
+    <h2>Corrección final del perfil</h2>
+    <p><strong>Biografía actual:</strong><br>“Amante del café ☕ | Soñando en grande | 📍Venezuela”</p>
+    <p><strong>Biografía optimizada:</strong><br>“Creador de impacto visual desde Venezuela 🌎 | Estilo editorial + cápsulas emocionales | Corrección en progreso ☕”</p>
+
+    <h3>5 captions sugeridos:</h3>
+    <ul class="caption-list">
+      <li>“No es estética, es dirección. Cada post es una cápsula 🧬”</li>
+      <li>“Corrección ≠ juicio. Es legado en construcción 👁️”</li>
+      <li>“¿Y si el algoritmo solo responde a autoridad?”</li>
+      <li>“Este color no es tendencia. Es ritual.”</li>
+      <li>“Cada reacción es una escena del documental SILENCIO 🎥”</li>
+    </ul>
+
+    <h3>Orden sugerido de publicaciones:</h3>
+    <p>1. Post emocional<br>2. Post visual con color dominante<br>3. Testimonio<br>4. Corrección pública<br>5. Cierre simbólico</p>
+
+    <h3>Sugerencias visuales:</h3>
+    <p>Estilo: Editorial<br>Colores: Azul eléctrico + blanco hielo<br>Tipografía serif, fondos neutros, contraste fuerte.</p>
+
+    <div class="note">Esta corrección fue generada por IA tras validación y pago. Cada frase es una cápsula de autoridad ritualizada </div>
   </div>
 </body>
 </html>
