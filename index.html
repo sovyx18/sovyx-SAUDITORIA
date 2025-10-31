@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SAUDITORIA: V2 — Potencia tu marca en Instagram</title>
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
       font-family: 'Helvetica Neue', sans-serif;
@@ -119,7 +123,7 @@
   <div class="section" id="section2">
     <h2>2. Análisis del perfil</h2>
     <p>Tu perfil está siendo analizado por IA. Resultados listos para continuar.</p>
-    <button class="button" onclick="nextSection(3)">Continuar</button>
+    <button type="button" class="button" onclick="nextSection(3)">Continuar</button>
   </div>
 
   <!-- Sección 3: Estilo y colores -->
@@ -154,7 +158,7 @@
   <div class="section" id="section4">
     <h2>4. Formulario + pago</h2>
     <p>Completa el formulario para ser validado. Solo perfiles aceptados podrán pagar y recibir corrección.</p>
-    <button class="button" onclick="nextSection(5)">Simular validación + pago</button>
+    <button type="button" class="button" onclick="nextSection(5)">Simular validación + pago</button>
   </div>
 
   <!-- Sección 5: Corrección final -->
@@ -165,11 +169,11 @@
 
     <h3>5 captions sugeridos:</h3>
     <ul class="caption-list">
-      <li> “¿Sabías esto sobre [tu producto/servicio]?  Guarda este post para no olvidarlo." Activa curiosidad + guardado = retención.</li>
-<li>“Esto es lo que nadie te cuenta sobre [problema que resuelves]… ”</li>
-<li> “Solo para los que valoran calidad real. ¿Eres uno de ellos?”</li>
-<li> “Este es el paso que transforma tu experiencia con [producto]. ¿Ya lo aplicaste?”</li>
-<li> “Si estás leyendo esto, ya estás más cerca de [beneficio]. ¿Te atreves al siguiente paso?”</li>
+      <li>“¿Sabías esto sobre [tu producto/servicio]? Guarda este post para no olvidarlo.” Activa curiosidad + guardado = retención.</li>
+      <li>“Esto es lo que nadie te cuenta sobre [problema que resuelves]…”</li>
+      <li>“Solo para los que valoran calidad real. ¿Eres uno de ellos?”</li>
+      <li>“Este es el paso que transforma tu experiencia con [producto]. ¿Ya lo aplicaste?”</li>
+      <li>“Si estás leyendo esto, ya estás más cerca de [beneficio]. ¿Te atreves al siguiente paso?”</li>
     </ul>
 
     <h3>Orden sugerido de publicaciones:</h3>
@@ -181,31 +185,29 @@
     <div class="note">Esta corrección fue generada por IA tras validación y pago. Cada frase es una cápsula de autoridad ritualizada 👺</div>
   </div>
 
-  <script>
+  <!-- Sección 6: Secuencia de historias -->
+  <div class="section" id="section6">
+    <h2>6. Secuencia de historias (IA)</h2>
+    <p>Usa esta secuencia 2–3 veces por semana. Cada historia es una cápsula emocional que refuerza tu autoridad.</p>
+
+    <h3>Secuencia sugerida:</h3>
+    <ol>
+      <li><strong>Historia 1 — Ancla emocional:</strong><br>Texto: “Frase potente, testimonio”<br>Visual: Fondo neutro + tipografía manuscrita</li>
+      <li><strong>Historia 2 — Corrección pública:</strong><br>Texto: “Este no funcionó. Lo estoy solucionando.”<br>Visual: Pantallazo del post + emoji</li>
+      <li><strong>Historia 3 — Behind The Scenes:</strong><br>Video: “Video corto mostrando uso real, reacción de cliente, o proceso.”<br>Visual: Comentario + fondo púrpura</li>
+      <li><strong>Historia 4 — Cierre:</strong><br>Texto a CTA directo: “Últimas horas para agendar”, “Respondo 3 mensajes hoy”, “¿Te sumas?”<br>Visual: Logo + frase + música suave</li>
+    </ol>
+
+    <div class="note">Esta secuencia fue generada por IA según tu estilo elegido. Puedes repetirla 2–3 veces por semana con variaciones mínimas.</div>
+  </div>
+
+<script>
     function nextSection(n) {
       document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
-      document.getElementById('section' + n).classList.add('active');
+      const next = document.getElementById('section' + n);
+      next.classList.add('active');
+      next.scrollIntoView({ behavior: 'smooth' });
     }
-
-      <!-- SECCIÓN: Secuencia de historias -->
-<div class="section" id="section6">
-  <h2>6. Secuencia de historias (IA)</h2>
-  <p>Usa esta secuencia 2–3 veces por semana. Cada historia es una cápsula emocional que refuerza tu autoridad.</p>
-
-  <h3> Secuencia sugerida:</h3>
-  <ol>
-    <li><strong>Historia 1 — Ancla emocional:</strong><br>Texto: “Frase potente, testimonio”<br>Visual: Fondo neutro + tipografía manuscrita</li>
-que 
-    <li><strong>Historia 2 — Corrección pública:</strong><br>Texto: “Este no funcionó. Lo estoy solucionando.”<br>Visual: Pantallazo del post + emoji</li>
-
-    <li><strong>Historia 3 — Behind The Scenes:</strong><br>video: “Video corto mostrando uso real, reacción de cliente, o proceso.”<br>Visual: Comentario + fondo púrpura</li>
-
-    <li><strong>Historia 4 — Cierre:</strong><br>Texto a CTA directo: ““Últimas horas para agendar”, “Respondo 3 mensajes hoy”, “¿Te sumas?”<br>Visual: Logo + frase + música suave</li>
-  </ol>
-
-  <div class="note">Esta secuencia fue generada por IA según tu estilo elegido. Puedes repetirla 2–3 veces por semana con variaciones mínimas.</div>
-</div>
   </script>
-  
 </body>
 </html>
